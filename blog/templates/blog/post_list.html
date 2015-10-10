@@ -7,9 +7,17 @@
         <h1><a href="">Hannah's Django Blog</a></h1>
   </div>
   <div>
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+    </div>
     <h2><a href= "">My First Post</a></h2>
+    <p>Hi there!</p>
     <p> I built this website from scratch. It will start out simple, but I hope it will get better with time.
-      <p>Hi there!</p>
       <p>It works!</p>
       <p>published: 10.10.2015 </p>
     </div>
